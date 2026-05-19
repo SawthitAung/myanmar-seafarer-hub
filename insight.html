@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - Seafarer Hub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- ၁။ Sticky Navigation -->
+      <nav id="sticky-nav">
+        <div class="nav-container">
+          <div class="nav-left">
+            <button id="menu-toggle" class="icon-btn">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+              <svg width="24" height="24" viewBox="0 0 32 32">
+                <rect width="32" height="32" fill="#FECB00" />
+                <rect y="10.6" width="32" height="10.7" fill="#34B233" />
+                <rect y="21.3" width="32" height="10.7" fill="#EA2839" />
+                <path
+                  d="M16 4l2.4 7.3H26l-6.1 4.5 2.3 7.2L16 18.5l-6.2 4.5 2.3-7.2-6.1-4.5h7.6z"
+                  fill="#FFF"
+                />
+              </svg>
+              <span data-i18n="nav-logo">MYANMAR SEAFARER HUB</span>
+            </div>
+          </div>
+          <div class="nav-right desktop-only">
+            <a href="shop.html" class="btn-shop">
+              <i class="fas fa-store"></i>
+              <span data-i18n="nav-shop"> ရိက္ခာဆိုင်</span>
+            </a>
+            <a href="#contact" class="nav-link" data-i18n="nav-contact">
+              <i class="fas fa-phone"></i><span> ဆက်သွယ်ရန် </span></a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- ၂။ Sidebar Drawer -->
+      <aside id="sidebar">
+        <div class="sidebar-header">
+          <h3 data-i18n="cat-title">ကဏ္ဍများ</h3>
+          <button id="close-sidebar" class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <ul class="categories-list">
+          <li>
+            <a href="index.html"
+              ><i class="fas fa-home"></i>
+              <span data-i18n="nav-home">ပင်မ</span></a
+            >
+          </li>
+          <li>
+            <a href="shop.html"
+              ><i class="fas fa-store"></i>
+              <span data-i18n="cat-shop">ရိက္ခာဆိုင်</span></a
+            >
+          </li>
+          <li>
+            <a href="docs.html"
+              ><i class="fas fa-file-alt"></i>
+              <span data-i18n="cat-docs">စာရွက်စာတမ်းများ</span></a
+            >
+          </li>
+          <li class="active">
+            <a href="insight.html">
+              <i class="fas fa-book-reader"></i>
+              <span data-i18n="cat-insight">ပင်လယ်ပြင်ဗဟုသုတ</span>
+            </a>
+          </li>
+          <li>
+            <a href="training.html"
+              ><i class="fas fa-graduation-cap"></i>
+              <span data-i18n="cat-training">သင်တန်းများ</span></a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <div id="overlay"></div>
+
+      <main id="content-area">
+        <!-- docs.html အတွက် Hero Section (index နှင့် ပုံစံတူ) -->
+        <section class="hero">
+          <h1 data-i18n="insight-page-title">ပင်လယ်ပြင်ဗဟုသုတ</h1>
+          <p data-i18n="insight-page-desc">
+            သင်္ဘောသားလူသစ်များအတွက် အခြေခံဗဟုသုတများနှင့် သိမှတ်ဖွယ်ရာ
+            အတွေ့အကြုံများ။
+          </p>
+          <div class="back-link-container">
+            <a href="index.html" class="back-link">
+              <i class="fas fa-arrow-left"></i>
+              <span data-i18n="back-home">ပင်မစာမျက်နှာသို့</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="insight-section">
+          <article class="insight-guide-card">
+            <div class="insight-title-wrapper">
+              <i class="fas fa-ship"></i>
+              <h2 data-i18n="insight-sec1-title">
+                ရေကြောင်းအခြေခံ ဗဟုသုတများနှင့် လမ်းစည်းကမ်းများ
+              </h2>
+            </div>
+
+            <div class="doc-image-wrapper"></div>
+
+            <div class="insight-content-body">
+              <p data-i18n="insight-sec1-p1">
+                သင်္ဘောသားလူသစ်တစ်ဦးအနေဖြင့်ပင်လယ်ပြင်သို့ မထွက်ခွာမီ
+                ရေကြောင်းဆိုင်ရာအခြေခံစံနှုန်းများနှင့် စည်းကမ်းများကို မဖြစ်မနေ
+                လေ့လာထားရပါမည်။ အထူးသဖြင့် နိုင်ငံတကာ
+                ပင်လယ်ပြင်တိုက်မိမှုကာကွယ်ရေး စည်းမျက်ဥ်းများ (COLREGs) သည်
+                အလွန်အရေးကြီးပါသည်။
+              </p>
+
+              <p data-i18n="insight-sec1-p2">
+                ထို့အပြင် မိမိတာဝန်ကျမည့် Deck သို့မဟုတ် Engine Room အလိုက်
+                အခြေခံအသုံးအနှုန်းများ (Maritime Terms) နှင့်
+                အရေးပေါ်အခြေအနေများတွင် အသက်ဘေးကင်းရှင်းရေးအတွက် လိုက်နာရမည့်
+                Safety ပရိုတိုကောများကိုလည်း ကြိုတင်သိရှိထားရန် လိုအပ်သည်။
+              </p>
+
+              <h3 data-i18n="insight-sec1-sub1">
+                မဖြစ်မနေ သိထားရမည့် အခြေခံအချက်များ-
+              </h3>
+              <ul class="requirement-list">
+                <li data-i18n="insight-sec1-list1">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>COLREGs (လမ်းစည်းကမ်းများ)</strong> နှင့် အခြေခံ
+                    ရေကြောင်းပြပညာ (Navigation)</span
+                  >
+                </li>
+                <li data-i18n="insight-sec1-list2">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Engine Room / Bridge Equipment</strong>
+                    (စက်ခန်းနှင့် ပဲ့စင်ရှိ အခြေခံပစ္စည်းများ)</span
+                  >
+                </li>
+                <li data-i18n="insight-sec1-list3">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Emergency Procedures</strong> (အရေးပေါ်အခြေအနေ
+                    တုံ့ပြန်မှုနှင့် အသက်ကယ်လှေလေ့ကျင့်ခန်းများ)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="insight-guide-card">
+            <div class="insight-title-wrapper">
+              <i class="fas fa-comments"></i>
+              <h2 data-i18n="insight-sec2-title">
+                နိုင်ငံတကာသင်္ဘောများနှင့် သင်္ဘောသုံးအင်္ဂလိပ်စာ (Maritime
+                English)
+              </h2>
+            </div>
+
+            <div class="doc-image-wrapper"></div>
+
+            <div class="insight-content-body">
+              <p data-i18n="insight-sec2-p1">
+                နိုင်ငံတကာကုန်တင်သင်္ဘောကြီးများပေါ်တွင် မတူညီသော နိုင်ငံစုံမှ
+                သင်္ဘောသားများနှင့် အတူတကွ အလုပ်လုပ်ရမည်ဖြစ်သောကြောင့်
+                အင်္ဂလိပ်စာ ဆက်သွယ်ပြောဆိုနိုင်မှုသည်
+                လုပ်ငန်းခွင်အဆင်ပြေစေရန်အတွက် သော့ချက်ဖြစ်ပါသည်။
+              </p>
+
+              <p data-i18n="insight-sec2-p2">
+                သာမန်အင်္ဂလိပ်စာအပြင် ပင်လယ်ပြင်လုပ်ငန်းခွင်သုံး အင်္ဂလိပ်စာ
+                (Maritime English) နှင့် Standard Marine Communication Phrases
+                (SMCP) များကို တတ်မြောက်ထားခြင်းဖြင့်
+                အမိန့်ပေးစေခိုင်းမှုများကို တိကျစွာနားလည်ပြီး
+                ဘေးအန္တရာယ်ကင်းရှင်းစွာ လုပ်ကိုင်နိုင်မည်ဖြစ်သည်။
+              </p>
+
+              <ul class="requirement-list">
+                <li data-i18n="insight-sec2-list1">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Marlins Test</strong> သို့မဟုတ် CES Test ကဲ့သို့
+                    အင်္ဂလိပ်စာစစ်ဆေးမှုများအတွက် ပြင်ဆင်ခြင်း</span
+                  >
+                </li>
+                <li data-i18n="insight-sec2-list2">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>SMCP</strong> (သင်္ဘောသုံး
+                    ပုံသေဆက်သွယ်ရေးစကားစုများ) ကို လေ့လာမှတ်သားခြင်း</span
+                  >
+                </li>
+                <li data-i18n="insight-sec2-list3">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>ရေဒီယိုဆက်သွယ်ရေး</strong> (VHF Radio
+                    Communication) အခြေခံများကို နားလည်ခြင်း</span
+                  >
+                </li>
+              </ul>
+
+              <div class="pro-tip">
+                <b data-i18n="insight-tip-label">အတွေ့အကြုံ ဆရာတင်စကား:</b>
+                <span data-i18n="insight-tip-text"
+                  >အင်္ဂလိပ်စာသည် စာအုပ်ထဲတွင်သာမက အချင်းချင်း
+                  နေ့စဥ်ပြောဆိုဆက်သွယ်ရာတွင် ယုံကြည်မှုရှိရှိ ပြောဆိုနိုင်ရန်
+                  အမြဲတစေ လေ့ကျင့်ထားပါ။</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="insight-guide-card">
+            <div class="insight-title-wrapper">
+              <i class="fas fa-handshake"></i>
+              <h2 data-i18n="insight-sec3-title">
+                သင်္ဘောပေါ်ရှိ လုပ်ငန်းခွင်ယဉ်ကျေးမှုနှင့် စိတ်နေသဘောထား
+                (Attitude)
+              </h2>
+            </div>
+
+            <div class="doc-image-wrapper"></div>
+
+            <div class="insight-content-body">
+              <p data-i18n="insight-sec3-p1">
+                ပင်လယ်ပြင်တွင် လပေါင်းများစွာ အတူတကွ ဖြတ်သန်းရမည်ဖြစ်၍
+                ပညာအရည်အချင်းအပြင် စိတ်နေသဘောထားကောင်းမွန်မှု (Good Attitude)
+                နှင့် အသင်းအဖွဲ့ဖြင့် ပူးပေါင်းလုပ်ဆောင်နိုင်စွမ်း (Teamwork)
+                မှာ အလွန်အရေးကြီးသော အချက်ဖြစ်သည်။
+              </p>
+
+              <p data-i18n="insight-sec3-p2">
+                အထူးသဖြင့် အထက်လူကြီးများ၏ အမိန့်ကို နာခံတတ်ခြင်း (Discipline)၊
+                ကွဲပြားခြားနားသော ယဉ်ကျေးမှုများကို လေးစားတတ်ခြင်း (Cultural
+                Awareness) နှင့် စိတ်ဖိစီးမှုများကို ထိန်းချုပ်နိုင်ခြင်းတို့သည်
+                ရေရှည်သင်္ဘောသားဘဝ အောင်မြင်မှုအတွက် မရှိမဖြစ်လိုအပ်ပါသည်။
+              </p>
+
+              <ul class="requirement-list">
+                <li data-i18n="insight-sec3-list1">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Teamwork</strong> (အသင်းအဖွဲ့နှင့် တက်ကြွစွာ
+                    ပူးပေါင်းလုပ်ကိုင်နိုင်စွမ်း)</span
+                  >
+                </li>
+                <li data-i18n="insight-sec3-list2">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Discipline & Safety Mindset</strong>
+                    (စည်းကမ်းလိုက်နာမှုနှင့် ဘေးအန္တရာယ်အသိရှိမှု)</span
+                  >
+                </li>
+                <li data-i18n="insight-sec3-list3">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Cultural Adaptability</strong> (နိုင်ငံစုံ
+                    လူမျိုးစုံနှင့် လိုက်လျောညီထွေ နေထိုင်နိုင်မှု)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <!-- Copyright Section (New) -->
+        <footer>
+          <div
+            class="footer-bottom"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+            "
+          >
+            <div>&copy; 2026 Myanmar Seafarer Hub. All rights reserved.</div>
+            <div class="footer-links">
+              <a
+                href="terms.html"
+                onclick="
+                  openTermsModal();
+                  return false;
+                "
+                style="
+                  color: var(--accent);
+                  text-decoration: none;
+                  font-size: 0.85rem;
+                  margin: 0 10px;
+                "
+                >Terms & Conditions</a
+              >
+              |
+              <a
+                href="index.html#about"
+                style="
+                  color: var(--text-dim);
+                  text-decoration: none;
+                  font-size: 0.85rem;
+                  margin: 0 10px;
+                "
+                >About Us</a
+              >
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Unified Floating Language Switcher (Laptop ရော Mobile ပါ တစ်ခုတည်းကိုသာ သုံးသည်) -->
+    <div class="mobile-lang-bar" id="langBar">
+      <div class="lang-toggle-icon">
+        <i class="fas fa-earth"></i>
+      </div>
+      <div class="lang-options">
+        <button data-lang="en">EN</button>
+        <button data-lang="my" class="active">MY</button>
+      </div>
+    </div>
+    <!-- Mobile Bottom Navigation Bar -->
+    <div id="mobile-bottom-nav" class="mobile-only">
+      <div class="bottom-nav-item">
+        <a href="index.html#home">
+          <i class="fas fa-home"></i>
+          <span data-i18n="nav-home">ပင်မ</span>
+        </a>
+      </div>
+      <div class="bottom-nav-item">
+        <button id="mobile-cat-toggle" class="nav-btn">
+          <i class="fas fa-list"></i>
+          <span data-i18n="nav-cat">ကဏ္ဍ</span>
+        </button>
+      </div>
+
+      <div class="bottom-nav-item">
+        <a href="shop.html#contact">
+          <i class="fas fa-store"></i>
+          <span data-i18n="nav-shop">စျေးဆိုင်</span>
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="language.js"></script>
+  </body>
+</html>
+s

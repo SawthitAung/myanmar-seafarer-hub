@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - Seafarer Hub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ၁။ Sticky Navigation -->
+    <nav id="sticky-nav">
+      <div class="nav-container">
+        <div class="nav-left">
+          <button id="menu-toggle" class="icon-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 32 32">
+              <rect width="32" height="32" fill="#FECB00" />
+              <rect y="10.6" width="32" height="10.7" fill="#34B233" />
+              <rect y="21.3" width="32" height="10.7" fill="#EA2839" />
+              <path
+                d="M16 4l2.4 7.3H26l-6.1 4.5 2.3 7.2L16 18.5l-6.2 4.5 2.3-7.2-6.1-4.5h7.6z"
+                fill="#FFF"
+              />
+            </svg>
+            <span data-i18n="nav-logo">MYANMAR SEAFARER HUB</span>
+          </div>
+        </div>
+        <div class="nav-right desktop-only">
+          <a href="shop.html" class="btn-shop">
+            <i class="fas fa-store"></i>
+            <span data-i18n="nav-shop"> ရိက္ခာဆိုင်</span>
+          </a>
+          <a href="#contact" class="nav-link" data-i18n="nav-contact">
+            <i class="fas fa-phone"></i><span> ဆက်သွယ်ရန် </span></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- ၂။ Sidebar Drawer -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h3 data-i18n="cat-title">ကဏ္ဍများ</h3>
+        <button id="close-sidebar" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="categories-list">
+        <li>
+          <a href="index.html"
+            ><i class="fas fa-home"></i>
+            <span data-i18n="nav-home">ပင်မ</span></a
+          >
+        </li>
+        <li>
+          <a href="shop.html"
+            ><i class="fas fa-store"></i>
+            <span data-i18n="cat-shop">ရိက္ခာဆိုင်</span></a
+          >
+        </li>
+        <li class="active">
+          <a href="docs.html"
+            ><i class="fas fa-file-alt"></i>
+            <span data-i18n="cat-docs">စာရွက်စာတမ်းများ</span></a
+          >
+        </li>
+        <li>
+          <a href="insight.html">
+            <i class="fas fa-book-reader"></i>
+            <span data-i18n="cat-insight">ပင်လယ်ပြင်ဗဟုသုတ</span>
+          </a>
+        </li>
+        <li>
+          <a href="training.html"
+            ><i class="fas fa-graduation-cap"></i>
+            <span data-i18n="cat-training">သင်တန်းများ</span></a
+          >
+        </li>
+      </ul>
+    </aside>
+
+    <div id="overlay"></div>
+
+    <div class="app-layout">
+      <main id="content-area">
+        <!-- docs.html အတွက် Hero Section (index နှင့် ပုံစံတူ) -->
+        <section class="hero">
+          <h1 data-i18n="docs-page-title">စာရွက်စာတမ်း လမ်းညွှန်ချက်များ</h1>
+          <p data-i18n="docs-page-desc">
+            သင်္ဘောသားတစ်ဦး လိုအပ်သော အခြေခံစာရွက်စာတမ်းများ လျှောက်ထားရန်
+            လမ်းညွှန်။
+          </p>
+          <div class="back-link-container">
+            <a href="index.html" class="back-link">
+              <i class="fas fa-arrow-left"></i>
+              <span data-i18n="back-home">ပင်မစာမျက်နှာသို့</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <!-- 1. SIRB Section -->
+          <article class="doc-guide-card">
+            <div class="doc-title-wrapper">
+              <i class="fas fa-book"></i>
+              <h2 data-i18n="doc-sirb-title">
+                SIRB (Seaman Book) လျှောက်ထားနည်း လမ်းညွှန်(လူသစ်များအတွက်)
+              </h2>
+            </div>
+            <p data-i18n="doc-sirb-desc">
+              သင်္ဘောသားတစ်ယောက်အဖြစ် ပထမဦးဆုံးခြေလှမ်းလှမ်းဖို့အတွက် SIRB
+              (Seaman Book) ဟာ မရှိမဖြစ်လိုအပ်တဲ့ သက်သေခံလက်မှတ်တစ်ခု ဖြစ်ပါတယ်
+              ။ လူသစ် (New Seafarer / Cadet) တစ်ယောက်အနေနဲ့ ဒီစာအုပ်ကို
+              စနစ်တကျနဲ့ အဆင်ပြေပြေ လျှောက်ထားနိုင်ဖို့ အခြေခံပြင်ဆင်ရမယ့်
+              အချက်အလက်တွေကို စုစည်းဖော်ပြပေးလိုက်ပါတယ် ။
+            </p>
+            <ul class="requirement-list">
+              <li data-i18n="sirb-req-1">
+                <i class="fas fa-check-circle"></i>သင်္ဘောသားလူသစ်လျှောက်လွှာရယူ
+                ရမည်။ (သင်္ဘောကျင်းဝင်းအတွင်း တွင်ဝယ်ယူနိုင်ပါသည်။)
+              </li>
+              <li data-i18n="sirb-req-2">
+                <i class="fas fa-check-circle"></i> ဆေးစစ်မှတ်တမ်း (Medical
+                Certificate) DMA မှ အသိအမှတ်ပြုထားသော ဆေးခန်းများတွင်သာ
+                စစ်ဆေးရန် လိုအပ်ပါသည်။
+              </li>
+              <li data-i18n="sirb-req-3">
+                <i class="fas fa-check-circle"></i> မျက်စိစစ်မှတ်တမ်း (Eye Test
+                Certificate)အား DMA ရေးကြောင်းဌာနခွဲ နှင့်
+                ရေကြောင်းအင်ဂျင်နီယာဌာနခွဲများတွင် စစ်ဆေးရန် လိုအပ်ပါသည်။ (GS
+                နှင့် Ship's Cook ရာထူးလျှောက်ထားသူများ မလိုအပ်ပါ)
+              </li>
+
+              <li data-i18n="sirb-req-4">
+                <i class="fas fa-check-circle"></i> သင်တန်းဆင်းလက်မှတ်များ
+                (Pre-Sea, Basic Safety Training, etc.)
+              </li>
+              <li data-i18n="sirb-req-5">
+                <i class="fas fa-check-circle"></i> Deck Rating နှင့် Engine
+                Rating လျှောက်ထားသူများအတွက် Pre-Sea Training Certificate
+                လိုအပ်ပါသည်။
+              </li>
+              <li data-i18n="sirb-req-6">
+                <i class="fas fa-check-circle"></i> Ship's Cook
+                ရာထူးလျှောက်ထားသူများအတွက် Ship's Cook Training Certificate
+                လိုအပ်ပါသည်။
+              </li>
+              <li data-i18n="sirb-req-7">
+                <i class="fas fa-check-circle"></i> Training/Electro Technical
+                Rating၊ Training/Electro Technical Officer နှင့် Engine Cadet
+                ရာထူးလျှောက်ထားသူများအတွက် Workshop Skill Certificate
+                လိုအပ်ပါသည်။
+              </li>
+              <li data-i18n="sirb-req-8">
+                <i class="fas fa-check-circle"></i>
+                နိုင်ငံသားမှတ်ပုံတင် မိတ္တူ
+              </li>
+              <li data-i18n="sirb-req-9">
+                <i class="fas fa-check-circle"></i> ပညာရေးအရည်အချင်းများ
+                (ဆယ်တန်းအောင်လက်မှတ် သို့မဟုတ် ဘွဲ့လက်မှတ်) မူရင်းနှင့် မိတ္တူ
+              </li>
+              <li data-i18n="sirb-req-10">
+                <i class="fas fa-check-circle"></i> နိုင်ငံကူးလက်မှတ် (PS)
+                မိတ္တူ
+              </li>
+              <li data-i18n="sirb-req-11">
+                <i class="fas fa-check-circle"></i> သန်းခေါင်စာရင်း မိတ္တူ
+              </li>
+              <li data-i18n="sirb-req-12">
+                <i class="fas fa-check-circle"></i> (၂)လက်မအရွယ်ဓာတ်ပုံ တစ်ပုံ
+                (၁) ပုံ၊ အဖြူရောင်နောက်ခံ
+              </li>
+              <li data-i18n="sirb-req-13">
+                <i class="fas fa-check-circle"></i> စာအုပ်ထုတ်ပေးရန်
+                လျှောက်လွှာပုံစံ လိုအပ်ပါသည်။
+              </li>
+            </ul>
+            <div class="pro-tip">
+              <b data-i18n="pro-tip-label">မှတ်ချက် :</b>
+              <span data-i18n="sirb-tip"
+                >SIRB သက်တမ်းမှာ များသောအားဖြင့် (၁၀) နှစ်ဖြစ်ပြီး၊
+                သက်တမ်းမကုန်မီ (၆) လအလိုတွင် ကြိုတင်ပြင်ဆင်သင့်ပါသည်။</span
+              >
+            </div>
+            <!-- ပြုပြင်ပြီးသော Disclaimer Box (အဝါရောင်အလင်း Box ဒီဇိုင်းသစ်) -->
+            <div class="pro-tip disclaimer-box">
+              <b data-i18n="sirb-warning-label">အရေးကြီးသတိပြုရန်</b>
+              <span data-i18n="sirb-new-tip"
+                >ဤအချက်အလက်များသည် လူသစ်များ လွယ်ကူစွာ နားလည်နိုင်စေရန်
+                လမ်းညွှန်ပေးထားခြင်းသာ ဖြစ်ပါတယ် ။
+                ရေကြောင်းပို့ဆောင်ရေးညွှန်ကြားမှုဦးစီးဌာန (DMA) ရဲ့
+                စည်းမျဉ်းများနှင့် လျှောက်ထားမှုပုံစံ (SOP) များသည်
+                အချိန်နဲ့အမျှ ပြောင်းလဲမှု ရှိနိုင်ပါသဖြင့် ၊ ပိုမိုတိကျသေချာသော
+                နောက်ဆုံးရ အချက်အလက်များနှင့် Application Form များကိုDMA ၏
+                တရားဝင်ဝဘ်ဆိုက်
+                <a href="http://www.dma.gov.mm" target="_blank"
+                  >www.dma.gov.mm</a
+                >
+                တွင် တိုက်ရိုက်ဝင်ရောက် စစ်ဆေးဖတ်ရှုကြပါရန်
+                တိုက်တွန်းအပ်ပါသည်။</span
+              >
+            </div>
+          </article>
+
+          <!-- 2. SID Section -->
+          <article class="doc-guide-card">
+            <div class="doc-title-wrapper">
+              <i class="fas fa-id-card-clip"></i>
+              <h2 data-i18n="doc-sirb-old-title">
+                SIRB (Seaman Book) သက်တမ်းတိုးမည့်သူများအတွက်
+                လမ်းညွှန်(ဝါရင့်သင်္ဘောသားများအတွက်)
+              </h2>
+            </div>
+            <p data-i18n="doc-sirb-old-desc">
+              SIRB သက်တမ်းတိုးမည့်သူများအတွက် လိုအပ်သော စာရွက်စာတမ်းများ နှင့်
+              လျှောက်ထားနည်းလမ်းညွှန်ချက်များ။
+            </p>
+            <ul class="requirement-list">
+              <li data-i18n="sirb-old-req-1">
+                <i class="fas fa-check-circle"></i> SIRB သက်တမ်းတိုးလျှောက်လွှာ
+              </li>
+              <li data-i18n="sirb-old-req-2">
+                <i class="fas fa-check-circle"></i> SIRB စာအုပ်ဖိုး
+                ငွေသွှင်းချလံ
+              </li>
+              <li data-i18n="sirb-old-req-3">
+                <i class="fas fa-check-circle"></i> SIRB စာအုပ် မူရင်းနှင့်
+                မိတ္တူ
+              </li>
+              <li data-i18n="sirb-old-req-4">
+                <i class="fas fa-check-circle"></i>သက်တမ်းရှိ နိုင်ငံကူးလက်မှတ်
+              </li>
+              <div class="pro-tip">
+                <b data-i18n="sirb-old-tip-label">Tip:</b>
+                <span data-i18n="sirb-old-tip"
+                  >SIRB နှင့် နိုင်ငံကူးလက်မှတ် များ နှစ်ခုလုံးသက်တမ်းကုန်နေပါက
+                  SIRB ကို အရင်သက်တမ်းတိုးရပါမည်။</span
+                >
+              </div>
+              <!-- ပြုပြင်ပြီးသော Disclaimer Box (အဝါရောင်အလင်း Box ဒီဇိုင်းသစ်) -->
+              <div class="pro-tip disclaimer-box">
+                <b data-i18n="sirb-warning-label">အရေးကြီးသတိပြုရန်</b>
+                <span data-i18n="sirb-new-tip"
+                  >ဤအချက်အလက်များသည် လူသစ်များ လွယ်ကူစွာ နားလည်နိုင်စေရန်
+                  လမ်းညွှန်ပေးထားခြင်းသာ ဖြစ်ပါတယ် ။
+                  ရေကြောင်းပို့ဆောင်ရေးညွှန်ကြားမှုဦးစီးဌာန (DMA) ရဲ့
+                  စည်းမျဉ်းများနှင့် လျှောက်ထားမှုပုံစံ (SOP) များသည်
+                  အချိန်နဲ့အမျှ ပြောင်းလဲမှု ရှိနိုင်ပါသဖြင့် ၊
+                  ပိုမိုတိကျသေချာသော နောက်ဆုံးရ အချက်အလက်များနှင့် Application
+                  Form များကိုDMA ၏ တရားဝင်ဝဘ်ဆိုက်
+                  <a href="http://www.dma.gov.mm" target="_blank"
+                    >www.dma.gov.mm</a
+                  >
+                  တွင် တိုက်ရိုက်ဝင်ရောက် စစ်ဆေးဖတ်ရှုကြပါရန်
+                  တိုက်တွန်းအပ်ပါသည်။</span
+                >
+              </div>
+            </ul>
+          </article>
+          <!-- 3. SID Section -->
+          <article class="doc-guide-card">
+            <div class="doc-title-wrapper">
+              <i class="fas fa-id-card-clip"></i>
+              <h2 data-i18n="doc-sid-title">SID (Identity Document)</h2>
+            </div>
+            <p data-i18n="doc-sid-desc">
+              ILO Convention C185 အရ နိုင်ငံတကာဆိပ်ကမ်းများတွင်
+              ကုန်းပေါ်တက်ခွင့် (Shore Leave) အတွက် မရှိမဖြစ်လိုအပ်ပါသည်။
+            </p>
+            <ul class="requirement-list">
+              <li data-i18n="sid-req-1">
+                <i class="fas fa-check-circle"></i> သက်တမ်းရှိ SIRB စာအုပ်
+              </li>
+              <li data-i18n="sid-req-2">
+                <i class="fas fa-check-circle"></i> သက်တမ်းရှိ နိုင်ငံကူးလက်မှတ်
+                (Passport)
+              </li>
+              <li data-i18n="sid-req-3">
+                <i class="fas fa-check-circle"></i> Online Application Form
+                (လျှောက်လွှာပုံစံ),QR Code ပါရှိရမည်။
+              </li>
+              <div class="pro-tip">
+                <b data-i18n="sid-tip-label">Tip:</b>
+                <span data-i18n="sid-tip"
+                  >မိတ္တူ & မူရင်း များလိုအပ်ပါသည်။</span
+                >
+              </div>
+            </ul>
+          </article>
+
+          <!-- 3. Passport Section -->
+          <article class="doc-guide-card">
+            <div class="doc-title-wrapper">
+              <i class="fas fa-passport"></i>
+              <h2 data-i18n="doc-passport-title">Passport (Type-PS)</h2>
+            </div>
+            <p style="margin-bottom: 15px" data-i18n="doc-passport-desc">
+              သင်္ဘောသားများအတွက် သာမန်နိုင်ငံကူးလက်မှတ် (PJ) အစား (Type-PS) ကို
+              ကိုင်ဆောင်ရပါသည်။
+            </p>
+            <ul class="requirement-list">
+              <li data-i18n="pass-req-1">
+                <i class="fas fa-check-circle"></i> မှတ်ပုံတင် မူရင်းနှင့်
+                မိတ္တူ
+              </li>
+              <li data-i18n="pass-req-2">
+                <i class="fas fa-check-circle"></i> အိမ်ထောင်စုစာရင်း မိတ္တူ
+              </li>
+              <li data-i18n="pass-req-3">
+                <i class="fas fa-check-circle"></i> ယခင် Passport အဟောင်း
+                (ရှိပါက)
+              </li>
+              <li data-i18n="pass-req-4">
+                <i class="fas fa-check-circle"></i> အခွန်ထမ်းဆောင်ထားသော
+                ပြေစာများ ပြရန်လိုအပ်ပါသည်။ (လူဟောင်းများအတွက်)
+              </li>
+              <li data-i18n="pass-req-5">
+                <i class="fas fa-check-circle"></i> QR Code ပါသော
+                လျှောက်လွှာပုံစံ (Online Application Form)
+              </li>
+            </ul>
+          </article>
+          <!-- 3. All in One Section -->
+          <article class="doc-guide-card">
+            <div class="doc-title-wrapper">
+              <i class="fas fa-passport"></i>
+              <h2 data-i18n="doc-all-in-one-title">All In One</h2>
+            </div>
+            <p style="margin-bottom: 15px" data-i18n="doc-all-in-one-desc">
+              သင်္ဘောသားများအတွက် (Certificates & Training) များကို တစ်ခုတည်း
+              အဖြစ် စုစည်းထားသော စာအုပ်တစ်ခုဖြစ်သည်။ လိုအပ်သော
+              စာရွက်စာတမ်းများကို တစ်နေရာတည်းတွင် စုစည်းထားခြင်းဖြင့်
+              ပိုမိုလွယ်ကူစေသည်။ ပြုလုပ်ရန် လိုအပ်သော စာရွက်စာတမ်းများမှာ
+              အောက်ပါအတိုင်းဖြစ်သည်။
+            </p>
+            <ul class="requirement-list">
+              <li data-i18n="all-in-one-req-1">
+                <i class="fas fa-check-circle"></i>
+                သင်တန်းဆင်းလက်မှတ်များ (Pre-Sea, Basic Safety Training, etc.)
+              </li>
+              <li data-i18n="all-in-one-req-2">
+                <i class="fas fa-check-circle"></i> သက်တမ်းရှိ Passport
+                (မူရင်းနှင့် မိတ္တူ)
+              </li>
+              <li data-i18n="all-in-one-req-3">
+                <i class="fas fa-check-circle"></i> ယခုနောက်ပိုင်းတွင်
+                အွန်လိုင်းဖြင့် လျှောက်ထားနိုင်သော စာရွက်စာတမ်းများ (Online
+                Applications, Certificate of Proficiency, Seafarer Identity
+                Document)
+              </li>
+            </ul>
+          </article>
+
+          <!-- 4. Medical Section -->
+          <article class="doc-guide-card">
+            <div class="doc-title-wrapper">
+              <i class="fas fa-user-md"></i>
+              <h2 data-i18n="doc-med-title">Medical Certificate</h2>
+            </div>
+            <p style="margin-bottom: 15px" data-i18n="doc-med-desc">
+              DMA မှ အသိအမှတ်ပြုထားသော ဆေးခန်းများတွင်သာ စစ်ဆေးရန် လိုအပ်ပါသည်။
+            </p>
+            <ul class="requirement-list">
+              <li data-i18n="med-req-1">
+                <i class="fas fa-check-circle"></i> အရောင်ခွဲခြားနိုင်စွမ်း
+                (Colour Blindness Test)
+              </li>
+              <li data-i18n="med-req-2">
+                <i class="fas fa-check-circle"></i> အကြားအာရုံနှင့် အမြင်အာရုံ
+                စစ်ဆေးချက်
+              </li>
+              <li data-i18n="med-req-3">
+                <i class="fas fa-check-circle"></i> ကူးစက်ရောဂါ ရှိ/မရှိ
+                စစ်ဆေးချက်
+              </li>
+              <li data-i18n="med-req-4">
+                <i class="fas fa-check-circle"></i> ရင်ဘတ် X-Ray ရိုက်ခြင်း
+              </li>
+            </ul>
+            <div class="pro-tip">
+              <b data-i18n="med-warning-label">သတိပြုရန်:</b>
+              <span data-i18n="med-tip"
+                >ဆေးစစ်သည့်အခါ ဆီးချို၊ သွေးတိုး စသည်တို့ကို
+                ကြိုတင်ထိန်းသိမ်းသွားရန် အကြံပြုလိုပါသည်။</span
+              >
+            </div>
+          </article>
+        </section>
+
+        <!-- Copyright Section (New) -->
+        <footer>
+          <div
+            class="footer-bottom"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+            "
+          >
+            <div>&copy; 2026 Myanmar Seafarer Hub. All rights reserved.</div>
+            <div class="footer-links">
+              <a
+                href="terms.html"
+                onclick="
+                  openTermsModal();
+                  return false;
+                "
+                style="
+                  color: var(--accent);
+                  text-decoration: none;
+                  font-size: 0.85rem;
+                  margin: 0 10px;
+                "
+                >Terms & Conditions</a
+              >
+              |
+              <a
+                href="index.html#about"
+                style="
+                  color: var(--text-dim);
+                  text-decoration: none;
+                  font-size: 0.85rem;
+                  margin: 0 10px;
+                "
+                >About Us</a
+              >
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Unified Floating Language Switcher (Laptop ရော Mobile ပါ တစ်ခုတည်းကိုသာ သုံးသည်) -->
+    <div class="mobile-lang-bar" id="langBar">
+      <div class="lang-toggle-icon">
+        <i class="fas fa-earth"></i>
+      </div>
+      <div class="lang-options">
+        <button data-lang="en">EN</button>
+        <button data-lang="my" class="active">MY</button>
+      </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <div id="mobile-bottom-nav" class="mobile-only">
+      <div class="bottom-nav-item">
+        <a href="index.html#home">
+          <i class="fas fa-home"></i>
+          <span data-i18n="nav-home">ပင်မ</span>
+        </a>
+      </div>
+      <div class="bottom-nav-item">
+        <!-- Mobile တွင် Sidebar Drawer ကို ဆွဲထုတ်မည့် Menu ခလုတ် -->
+        <button id="mobile-cat-toggle" class="nav-btn">
+          <i class="fas fa-list"></i>
+          <span data-i18n="nav-cat">ကဏ္ဍ</span>
+        </button>
+      </div>
+
+      <div class="bottom-nav-item">
+        <a href="shop.html#contact">
+          <i class="fas fa-store"></i>
+          <span data-i18n="nav-shop">စျေးဆိုင်</span>
+        </a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="language.js"></script>
+  </body>
+</html>
