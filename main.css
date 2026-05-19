@@ -548,13 +548,14 @@ button:not(.icon-btn):not(.nav-btn) {
   }
 }
 
-/* ==========================================
+/*==========================================
    📞 Contact Section Modern UI Design
-   ========================================== */
+========================================== */
 #contact {
-  padding: 60px 20px;
-  background: var(--bg-main); /* ဝဘ်ဆိုက်၏ Main Dark Background */
-  width: 100%;
+  display: flex;
+  flex-direction: column; /* Element များကို အပေါ်အောက် ဒေါင်လိုက်စီမည် */
+  align-items: center; /* အလျားလိုက် (ဘယ်ညာ) ဗဟိုတည့်တည့် ညှိမည် */
+  justify-content: center;
 }
 
 .contact-container {
@@ -562,12 +563,13 @@ button:not(.icon-btn):not(.nav-btn) {
   margin: 0 auto;
 }
 
+/* ဆက်သွယ်ရန် ခေါင်းစဉ် */
 #contact h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-bright);
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -575,12 +577,12 @@ button:not(.icon-btn):not(.nav-btn) {
 #contact h2::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
+  width: 45px;
   height: 3px;
-  background: var(--accent);
+  background: var(--accent); /* #eab308 ကို သုံးထားသည် */
   border-radius: 2px;
 }
 
@@ -588,120 +590,123 @@ button:not(.icon-btn):not(.nav-btn) {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
 }
 
-/* ဆက်သွယ်ရန် ကတ်ပြားတစ်ခုချင်းစီ၏ မူရင်းဒီဇိုင်း */
+/* ကတ်ပြားတစ်ခုချင်းစီ၏ မူရင်းဒီဇိုင်း (HTML မပြင်ဘဲ CSS ဖြင့် Center ညှိခြင်း) */
 .contact-info-item {
   display: flex;
+  flex-direction: column; /* 🎯 ဒေါင်လိုက်ပုံစံပြောင်းပြီး အလယ်သို့ ပို့ပေးမည့်စနစ် */
   align-items: center;
-  background: var(--card-bg); /* #1e293b Slate Blue */
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 16px;
-  padding: 18px 20px;
+  justify-content: center;
+  text-align: center;
+
+  background: var(--card-bg); /* #1e293b ကို သုံးထားသည် */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 20px;
   text-decoration: none;
   position: relative;
+  overflow: hidden;
   transition: var(--transition);
+  box-shadow: var(--shadow);
 }
 
-/* Icon ဝိုင်းလေးများ စတိုင်လ် */
+/* အိုင်ကွန်ဝိုင်းလေးများ စတိုင်လ် */
 .contact-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
-  margin-right: 18px;
-  flex-shrink: 0;
+  font-size: 1.4rem;
+  margin-right: 0 !important; /* မူရင်း ဘေးကပ် margin ကို ဖျက်ခြင်း */
+  margin-bottom: 16px; /* အောက်ကစာသားနှင့် ခွာရန် */
   transition: var(--transition);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* စာသားအုပ်စု နေရာချမှု */
+/* စာသားအုပ်စုတစ်ခုလုံးအား Center ညှိခြင်း */
 .contact-text-group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  overflow: hidden; /* စာရှည်လျှင် ဘောင်မကျော်စေရန် */
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
 }
 
 .contact-label {
   font-size: 0.75rem;
-  color: var(--text-dim);
+  color: var(--text-dim); /* #94a3b8 ကို သုံးထားသည် */
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
 }
 
 .contact-value {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  color: #ffffff;
-  word-break: break-all; /* အီးမေးလ်အရှည်ကြီးများကို ဖုန်းမှာ ကွက်တိဆင်းပေးမည့်စနစ် */
-}
-
-/* ညာဘက်အစွန်းက မျှားအိုင်ကွန် (နှိပ်လို့ရမှန်း သိသာစေရန်) */
-.contact-arrow {
-  margin-left: auto;
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 0.9rem;
+  color: var(--text-bright); /* #f8fafc ကို သုံးထားသည် */
+  word-break: break-all;
   transition: var(--transition);
 }
 
-/* 🎨 သီးသန့် Brand အရောင်များနှင့် Glow Effect များ သတ်မှတ်ခြင်း */
+/* 🎯 ဖုန်းဗားရှင်းမှာ အလယ်ပို့ထားတဲ့အတွက် ညာဘက်အစွန်းက မျှားကို ဖျောက်ထားပါမည် (ပိုမိုသပ်ရပ်စေရန်) */
+.contact-arrow {
+  display: none;
+}
+
+/* 🎨 `:root` ထဲက အရောင်များကို အခြေခံ၍ သီးသန့် Brand Background ပေးခြင်း */
 .phone-card .contact-icon {
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
-}
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--sms);
+} /* #10b981 */
 .email-card .contact-icon {
-  background: rgba(239, 68, 68, 0.1);
-  color: #ef4444;
-}
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--warning);
+} /* #ef4444 */
 .messenger-card .contact-icon {
-  background: rgba(0, 132, 255, 0.1);
-  color: #0084ff;
-}
+  background: rgba(0, 132, 255, 0.12);
+  color: var(--messenger);
+} /* #0084ff */
 
-/* 🌟 Hover & Tap Effect (မောက်စ်တင်လျှင် သို့မဟုတ် ဖုန်းဖြင့် ထိလျှင်) */
+/* 🌟 Hover & Tap Effect (မောက်စ်တင်လျှင် သို့မဟုတ် ဖုန်းဖြင့်ထိလျှင်) */
 .contact-info-item:hover {
-  background: #243249; /* နောက်ခံ အနည်းငယ် လင်းလာမည် */
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  background: #243249; /* နောက်ခံ အနည်းငယ် ပိုလင်းလာမည် */
+  transform: translateY(-5px); /* အပေါ်သို့ ကြွတက်လာမည့် Effect */
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.6);
 }
 
-.contact-info-item:hover .contact-arrow {
+/* Hover ဖြစ်ချိန်တွင် အိုင်ကွန်လေးများ ပိုမိုတောက်ပလာစေရန် Glow ထည့်ခြင်း */
+.contact-info-item:hover .contact-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px currentColor; /* အိုင်ကွန်အရောင်အတိုင်း နီယွန်မီး Glow ထွက်မည် */
+}
+
+/* Hover ဖြစ်လျှင် တန်ဖိုးစာသားကို ကိုစောရဲ့ ရွှေဝါရောင် `--accent` သို့ ပြောင်းပေးခြင်း */
+.contact-info-item:hover .contact-value {
   color: var(--accent);
-  transform: translateX(3px); /* မျှားလေး ညာဘက်သို့ အနည်းငယ် ရွေ့သွားမည် */
 }
 
-.phone-card:hover {
-  border-color: rgba(16, 185, 129, 0.3);
-}
-.email-card:hover {
-  border-color: rgba(239, 68, 68, 0.3);
-}
-.messenger-card:hover {
-  border-color: rgba(0, 132, 255, 0.3);
-}
-
-/* 💻 Laptop/Desktop ဖန်သားပြင်ကျယ်ကြီးများအတွက် ၃ ကော်လံ ဘေးတိုက်ခွဲမည့်စနစ် */
+/* 💻 Laptop/Desktop မျက်နှာပြင်ကျယ်ကြီးများအတွက် ၃ ကော်လံ ဘေးတိုက်ခွဲမည့်စနစ် */
 @media (min-width: 769px) {
   .contact-grid {
     grid-template-columns: repeat(
       3,
       1fr
-    ); /* ဘေးတိုက် ၃ ခု ညီတူညီမျှ ခွဲလိုက်သည် */
-    gap: 20px;
+    ); /* ၃ ကော်လံ ဘေးတိုက် ညီတူညီမျှ ခွဲလိုက်သည် */
+    gap: 24px;
   }
 
-  .contact-arrow {
-    display: none; /* Laptop တွင် ဘေးတိုက်ကတ်ဖြစ်သွားသဖြင့် မျှားကို ဖျောက်ထားပါမည် */
+  .contact-info-item {
+    padding: 35px 24px; /* Laptop တွင် ပိုကျယ်ကျယ်ဝန်းဝန်းဖြစ်အောင် Padding တိုးခြင်း */
   }
 }
-
-/*===============================================================
+/*===========================================================
  --- 4. Language Switcher (Floating Collapse Button)
  ========================================================= --- */
 .mobile-lang-bar {
