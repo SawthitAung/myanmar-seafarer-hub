@@ -549,142 +549,161 @@ button:not(.icon-btn):not(.nav-btn) {
 }
 
 /* ==========================================
-   CONTACT SECTION (RESPONSIVE LAYOUT)
+   📞 Contact Section Modern UI Design
    ========================================== */
-
 #contact {
-  margin: 40px 20px;
-  padding: 30px 24px;
-  background: linear-gradient(
-    145deg,
-    var(--primary-light),
-    var(--primary-dark)
-  );
-  border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  overflow: hidden;
+  padding: 60px 20px;
+  background: var(--bg-main); /* ဝဘ်ဆိုက်၏ Main Dark Background */
+  width: 100%;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 #contact h2 {
-  font-size: 1.6rem;
-  color: var(--text-bright);
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 35px;
+  position: relative;
 }
 
-/* Items Grid - Desktop တွင် ဘေးတိုက် တစ်တန်းတည်း ဖြစ်စေရန် */
+/* ခေါင်းစဉ်အောက်က ရွှေဝါရောင် လိုင်းတိုလေး */
+#contact h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* 📱 ဖုန်းပေါ်တွင် တစ်ခုစီ အောက်ဆင်းမည့် Grid စနစ် */
 .contact-grid {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
   width: 100%;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding: 10px 5px;
-  scrollbar-width: none;
 }
 
-.contact-grid::-webkit-scrollbar {
-  display: none;
-}
-
+/* ဆက်သွယ်ရန် ကတ်ပြားတစ်ခုချင်းစီ၏ မူရင်းဒီဇိုင်း */
 .contact-info-item {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 12px 20px;
-  border-radius: 20px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  background: var(--card-bg); /* #1e293b Slate Blue */
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 18px 20px;
   text-decoration: none;
-  flex: 0 0 auto;
+  position: relative;
+  transition: var(--transition);
 }
 
-.contact-info-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--accent);
-  transform: translateY(-3px);
-}
-
+/* Icon ဝိုင်းလေးများ စတိုင်လ် */
 .contact-icon {
-  width: 40px;
-  height: 40px;
-  background: rgba(234, 179, 8, 0.1);
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  color: var(--accent);
+  font-size: 1.3rem;
+  margin-right: 18px;
   flex-shrink: 0;
+  transition: var(--transition);
 }
 
+/* စာသားအုပ်စု နေရာချမှု */
 .contact-text-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  gap: 4px;
+  overflow: hidden; /* စာရှည်လျှင် ဘောင်မကျော်စေရန် */
 }
 
 .contact-label {
-  font-size: 0.65rem;
-  color: var(--accent);
+  font-size: 0.75rem;
+  color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-weight: 700;
-  opacity: 0.8;
 }
 
 .contact-value {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--text-bright);
-  white-space: nowrap;
+  color: #ffffff;
+  word-break: break-all; /* အီးမေးလ်အရှည်ကြီးများကို ဖုန်းမှာ ကွက်တိဆင်းပေးမည့်စနစ် */
 }
 
-/* --- Mobile View Adjustments (အပေါ်အောက် ပြောင်းလဲခြင်း) --- */
-@media (max-width: 768px) {
+/* ညာဘက်အစွန်းက မျှားအိုင်ကွန် (နှိပ်လို့ရမှန်း သိသာစေရန်) */
+.contact-arrow {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+/* 🎨 သီးသန့် Brand အရောင်များနှင့် Glow Effect များ သတ်မှတ်ခြင်း */
+.phone-card .contact-icon {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+.email-card .contact-icon {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+.messenger-card .contact-icon {
+  background: rgba(0, 132, 255, 0.1);
+  color: #0084ff;
+}
+
+/* 🌟 Hover & Tap Effect (မောက်စ်တင်လျှင် သို့မဟုတ် ဖုန်းဖြင့် ထိလျှင်) */
+.contact-info-item:hover {
+  background: #243249; /* နောက်ခံ အနည်းငယ် လင်းလာမည် */
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info-item:hover .contact-arrow {
+  color: var(--accent);
+  transform: translateX(3px); /* မျှားလေး ညာဘက်သို့ အနည်းငယ် ရွေ့သွားမည် */
+}
+
+.phone-card:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.email-card:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+.messenger-card:hover {
+  border-color: rgba(0, 132, 255, 0.3);
+}
+
+/* 💻 Laptop/Desktop ဖန်သားပြင်ကျယ်ကြီးများအတွက် ၃ ကော်လံ ဘေးတိုက်ခွဲမည့်စနစ် */
+@media (min-width: 769px) {
   .contact-grid {
-    flex-direction: column; /* ဖုန်းတွင် အပေါ်အောက် စီရန် */
-    flex-wrap: wrap;
-    gap: 12px;
-    overflow-x: visible;
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* ဘေးတိုက် ၃ ခု ညီတူညီမျှ ခွဲလိုက်သည် */
+    gap: 20px;
   }
 
-  .contact-info-item {
-    width: 100%; /* ဖုန်းတွင် တစ်ခုချင်းစီ အပြည့်ပြရန် */
-    max-width: 320px;
-    flex: none;
-    justify-content: flex-start;
-  }
-
-  .contact-value {
-    white-space: normal;
-    word-break: break-all;
-  }
-  .hero {
-    min-height: 30vh;
-    padding: 90px 20px 20px;
-    border-radius: 0 0 50px 50px;
-  }
-  .hero h1 {
-    line-height: 1.5;
+  .contact-arrow {
+    display: none; /* Laptop တွင် ဘေးတိုက်ကတ်ဖြစ်သွားသဖြင့် မျှားကို ဖျောက်ထားပါမည် */
   }
 }
 
-/* --- 4. Language Switcher (Floating Collapse Button) --- */
+/*===============================================================
+ --- 4. Language Switcher (Floating Collapse Button)
+ ========================================================= --- */
 .mobile-lang-bar {
   position: fixed;
   bottom: 220px;
