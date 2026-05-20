@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Myanmar Seafarer Hub - Guide, Documentation and Marine Supply for Myanmar Seafarers."
+    />
+    <meta
+      name="keywords"
+      content="Myanmar Seafarer, SIRB, CDC, Marine Shop, Seafarer Hub"
+    />
+    <title>Myanmar Seafarer Career Support - Dashboard</title>
+
+    <!-- Font Awesome 6 (နောက်ဆုံးထွက် version) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- main.css နှင့် style.css ကို ချိတ်ဆက်ထားသည် -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Icons -->
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- Sticky Navigation Bar -->
+      <nav id="sticky-nav">
+        <div class="nav-container">
+          <div class="nav-left">
+            <button id="menu-toggle" class="icon-btn">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+              <!-- မြန်မာအလံ SVG -->
+              <svg width="24" height="24" viewBox="0 0 32 32">
+                <rect width="32" height="32" fill="#FECB00" />
+                <rect y="10.6" width="32" height="10.7" fill="#34B233" />
+                <rect y="21.3" width="32" height="10.7" fill="#EA2839" />
+                <path
+                  d="M16 4l2.4 7.3H26l-6.1 4.5 2.3 7.2L16 18.5l-6.2 4.5 2.3-7.2-6.1-4.5h7.6z"
+                  fill="#FFF"
+                />
+              </svg>
+              <span data-i18n="nav-logo">MYANMAR SEAFARER HUB</span>
+            </div>
+          </div>
+
+          <div class="nav-right">
+            <a href="shop.html" class="btn-shop">
+              <i class="fas fa-store"></i>
+              <span data-i18n="nav-shop">ရိက္ခာဆိုင်</span>
+            </a>
+            <a
+              href="#contact"
+              class="nav-link desktop-only"
+              data-i18n="nav-contact"
+            >
+              <i class="fas fa-phone"></i><span>ဆက်သွယ်ရန်</span>
+            </a>
+
+            <!-- Integrated Navigation Language Switcher (အပေါ် Nav bar တန်းထဲသို့ ထည့်သွင်းထားခြင်း) -->
+            <div class="nav-lang-bar">
+              <button data-lang="en">EN</button>
+              <button data-lang="my" class="active">MY</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sidebar Drawer (ဘယ်ဘက်မှ ဆွဲထွက်လာမည့် ကဏ္ဍများ) -->
+      <aside id="sidebar">
+        <div class="sidebar-header">
+          <h3 data-i18n="cat-title">ကဏ္ဍများ</h3>
+        </div>
+        <ul class="categories-list">
+          <li class="active">
+            <a href="index.html" data-i18n="cat-all"
+              ><i class="fas fa-home"></i> ပင်မ</a
+            >
+          </li>
+          <li>
+            <a href="shop.html" data-i18n="cat-shop"
+              ><i class="fas fa-store"></i>ရိက္ခာဆိုင်</a
+            >
+          </li>
+          <li>
+            <a href="docs.html" data-i18n="cat-docs"
+              ><i class="fas fa-file-alt"></i> စာရွက်စာတမ်းများ</a
+            >
+          </li>
+          <li>
+            <a href="insight.html">
+              <i class="fas fa-book-reader"></i>
+              <span data-i18n="cat-insight">ပင်လယ်ပြင်ဗဟုသုတ</span>
+            </a>
+          </li>
+          <li>
+            <a href="training.html" data-i18n="cat-training"
+              ><i class="fas fa-graduation-cap"></i> သင်တန်းများ</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Overlay (Sidebar ပွင့်လာလျှင် နောက်ခံကို မှောင်သွားစေရန်) -->
+      <div id="overlay"></div>
+
+      <div class="app-layout">
+        <main id="content-area">
+          <!-- Hero Section -->
+          <section id="home" class="hero">
+            <h1 data-i18n="hero-title">
+              လူသစ်မှသည် ဝါရင့်သင်္ဘောသားများအထိ...
+            </h1>
+            <p data-i18n="hero-desc">
+              ပင်လယ်ပြင်လုပ်ငန်းခွင်အတွက် လိုအပ်သော <b>ရေကြောင်းဗဟုသုတများ</b>၊
+              <b>အလုပ်ခွင်သုံးအသုံးအဆောင်များ</b>နှင့်
+              <b>ရိက္ခာခြောက် အစားအသောက်များ</b>ကို တစ်နေရာတည်းတွင် စုံလင်စွာ
+              ရရှိနိုင်ပါပြီ။
+            </p>
+          </section>
+
+          <!-- Services -->
+          <section id="services" class="grid-container">
+            <!-- Shop (အသုံးအဆောင်ပစ္စည်းများ) Card -->
+
+            <article class="content-card">
+              <i class="fas fa-shopping-bag card-icon"></i>
+              <h3 data-i18n="service-1-title">
+                မြန်မာသင်္ဘောသားအသုံးအဆောင်များ စျေးဆိုင်
+              </h3>
+              <p data-i18n="service-1-desc">
+                သင်္ဘောသားသုံး အသုံးအဆောင်ပစ္စည်းများ၊ အစားအေသာက်များ နှင့်
+                အဝတ်အထည်များ။
+              </p>
+              <a href="shop.html">
+                <div class="btn-fake" data-i18n="service-1-link">
+                  ပစ္စည်းများ ကြည့်ရန်
+                </div>
+              </a>
+            </article>
+
+            <!-- Documentation Card တစ်ခုလုံးကို a tag ဖြင့် ပတ်ထားခြင်း -->
+
+            <article class="content-card">
+              <i class="fas fa-id-card card-icon"></i>
+              <h3 data-i18n="service-2-title">စာရွှက်စာတမ်းများ</h3>
+              <p data-i18n="service-2-desc">
+                SIRB နှင့် အခြားစာရွက်စာတမ်းများ လမ်းညွှန်ချက်။
+              </p>
+              <a href="docs.html">
+                <div class="btn-fake" data-i18n="service-2-link">
+                  လမ်းညွှန်ချက်များ
+                </div>
+              </a>
+            </article>
+
+            <!-- Seafarers Insight Card  -->
+
+            <article class="content-card">
+              <i class="fas fa-book-reader card-icon"></i>
+              <h3 data-i18n="service-3-title">ပင်လယ်ပြင်ဗဟုသုတ</h3>
+              <p data-i18n="service-3-desc">
+                သင်္ဘောသားလူသစ်များအတွက် မဖြစ်မနေသိထားရမည့်
+                အခြေခံဗဟုသုတများနှင့် သိမှတ်ဖွယ်ရာ အတွေ့အကြုံများ။
+              </p>
+              <a href="insight.html">
+                <div class="btn-fake" data-i18n="service-3-link">
+                  လေ့လာဖတ်ရှုရန်
+                </div>
+              </a>
+            </article>
+
+            <!-- Training Card -->
+
+            <article class="content-card">
+              <i class="fas fa-graduation-cap card-icon"></i>
+              <h3 data-i18n="service-4-title">Training Courses</h3>
+              <p data-i18n="service-4-desc">
+                သင်တန်းကျောင်းများ၏ တည်နေရာနှင့် ဖုန်းနံပါတ်များ။
+              </p>
+              <a href="training.html">
+                <div class="btn-fake" data-i18n="service-4-link">
+                  သင်တန်းကျောင်းများ
+                </div>
+              </a>
+            </article>
+          </section>
+          <section
+            id="about"
+            class="about-section"
+            style="
+              padding: 60px 24px;
+              max-width: 1200px;
+              margin: 25px auto;
+              overflow: visible;
+            "
+          >
+            <div
+              class="content-card"
+              style="
+                background: var(--card-bg);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+                padding: 40px;
+                text-align: center;
+                overflow: visible;
+              "
+            >
+              <h2
+                style="
+                  color: var(--accent);
+                  margin-top: 25px;
+                  margin-bottom: 15px;
+                  font-size: 2.2rem;
+                  line-height: 1.5; /* စာကြောင်းအမြင့်ကို တိုးလိုက်ခြင်းဖြင့် အသတ်များ လွတ်လွတ်လပ်လပ် ပေါ်လာမည် */
+                  display: block;
+                  padding-top: 10px; /* အပေါ်ကနေ စာလုံးကို အနည်းငယ် တွန်းချပေးသည် */
+                "
+                data-i18n="about-title"
+              >
+                ကျွန်ုပ်တို့အကြောင်း (About Us)
+              </h2>
+              <p
+                style="
+                  color: var(--text-bright);
+                  line-height: 1.8;
+                  max-width: 800px;
+                  margin: 0 auto 20px;
+                  font-size: 1rem;
+                "
+                data-i18n="about-desc"
+              >
+                Myanmar Seafarer Hub သည် မြန်မာသင်္ဘောသားများအတွက် ရည်ရွယ်ပြီး
+                စာရွက်စာတမ်းဆိုင်ရာ လမ်းညွှန်ချက်များ၊ အင်တာဗျူးပြင်ဆင်မှုများ၊
+                ပင်လယ်ရေကြောင်းသင်တန်းကျောင်း သတင်းအချက်အလက်များနှင့်
+                အရည်အသွေးမြင့် သင်္ဘောသားသုံး အသုံးအဆောင်များကို တစ်နေရာတည်းတွင်
+                အလွယ်တကူ ရရှိနိုင်ရန် ဖန်တီးထားသော တစ်ခုတည်းသော Platform
+                ဖြစ်ပါသည်။
+              </p>
+            </div>
+          </section>
+          <!-- Contact Section -->
+          <section id="contact">
+            <div class="contact-container">
+              <h2 data-i18n="contact-title">ဆက်သွယ်ရန်</h2>
+
+              <div class="contact-grid">
+                <a
+                  href="tel:+959792105373"
+                  class="contact-info-item phone-card"
+                >
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="contact-text-group">
+                    <span class="contact-label" data-i18n="contact-phone"
+                      >ဖုန်းနံပါတ်</span
+                    >
+                    <span class="contact-value">09-792105373</span>
+                  </div>
+                  <div class="contact-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:thitaung1992@email.com"
+                  class="contact-info-item email-card"
+                >
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-text-group">
+                    <span class="contact-label" data-i18n="contact-email"
+                      >အီးမေးလ်</span
+                    >
+                    <span class="contact-value">thitaung1992@email.com</span>
+                  </div>
+                  <div class="contact-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </a>
+
+                <a
+                  href="https://m.me/SawThitAg"
+                  target="_blank"
+                  class="contact-info-item messenger-card"
+                >
+                  <div class="contact-icon">
+                    <i class="fab fa-facebook-messenger"></i>
+                  </div>
+                  <div class="contact-text-group">
+                    <span class="contact-label" data-i18n="contact-fb"
+                      >Facebook</span
+                    >
+                    <span class="contact-value">Messenger</span>
+                  </div>
+                  <div class="contact-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Copyright Section -->
+          <footer>
+            <div
+              class="footer-bottom"
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <div class="copyright-text">
+                &copy; 2026 Myanmar Seafarer Hub. All rights reserved.
+              </div>
+              <div class="dev-tag">
+                <a
+                  href="terms.html"
+                  onclick="
+                    openTermsModal();
+                    return false;
+                  "
+                  style="
+                    color: var(--accent);
+                    text-decoration: none;
+                    font-size: 0.85rem;
+                    margin: 0 10px;
+                  "
+                  >Terms & Conditions</a
+                >
+                |
+                <a
+                  href="index.html#about"
+                  style="
+                    color: var(--text-dim);
+                    text-decoration: none;
+                    font-size: 0.85rem;
+                    margin: 0 10px;
+                  "
+                  >About Us</a
+                >
+              </div>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <!-- Unified Floating Language Switcher (Laptop ရော Mobile ပါ တစ်ခုတည်းကိုသာ သုံးသည်) -->
+    <div class="mobile-lang-bar" id="langBar">
+      <div class="lang-toggle-icon">
+        <i class="fas fa-earth"></i>
+      </div>
+      <div class="lang-options">
+        <button data-lang="en">EN</button>
+        <button data-lang="my" class="active">MY</button>
+      </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <div id="mobile-bottom-nav" class="mobile-only">
+      <div class="bottom-nav-item">
+        <a href="#home">
+          <i class="fas fa-home"></i>
+          <span data-i18n="nav-home">ပင်မ</span>
+        </a>
+      </div>
+      <div class="bottom-nav-item">
+        <!-- Mobile တွင် Sidebar Drawer ကို ဆွဲထုတ်မည့် Menu ခလုတ် -->
+        <button id="mobile-cat-toggle" class="nav-btn">
+          <i class="fas fa-list"></i>
+          <span data-i18n="nav-cat">ကဏ္ဍ</span>
+        </button>
+      </div>
+
+      <div class="bottom-nav-item">
+        <a href="shop.html#contact">
+          <i class="fas fa-store"></i>
+          <span data-i18n="nav-shop">စျေးဆိုင်</span>
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="language.js"></script>
+  </body>
+</html>
