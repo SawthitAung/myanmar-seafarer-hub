@@ -35,7 +35,7 @@ html {
   
 body {
   /* ပင်လယ်ပြင် အရောင်တောက်တောက် */
-  background-color: #020617; /* အောက်ခံအရောင် အသေထားခြင်း */
+  background-color: var(--bg-main); /* အောက်ခံအရောင် အသေထားခြင်း */
   background: radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
   background-attachment: fixed;
   color: var(--text-bright);
